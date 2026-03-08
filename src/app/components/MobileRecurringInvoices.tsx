@@ -1,7 +1,7 @@
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import imgInvoicesList from 'figma:asset/4e61a37dc6df489bb2855e6f2664021adb84c291.png';
-import imgRecurringSeries from 'figma:asset/da8d318aa15816a8337fc94481826106a187b959.png';
-import imgRecurringInvoice from 'figma:asset/d932143eaea2ef56a7a3d4f69717cb95276d3116.png';
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import imgInvoicesList from "@assets/4e61a37dc6df489bb2855e6f2664021adb84c291.png";
+import imgRecurringSeries from "@assets/da8d318aa15816a8337fc94481826106a187b959.png";
+import imgRecurringInvoice from "@assets/d932143eaea2ef56a7a3d4f69717cb95276d3116.png";
 
 export function MobileRecurringInvoices() {
   return (
@@ -10,12 +10,13 @@ export function MobileRecurringInvoices() {
       <div className="max-w-[600px] mx-auto mb-[40px] text-center">
         <h2
           className="text-[#0a0a0a] text-[26px] leading-[34px] sm:text-[30px] sm:leading-[40px] mb-[12px]"
-          style={{ fontFamily: 'Lexend Deca, sans-serif', fontWeight: 700 }}
+          style={{ fontFamily: "Lexend Deca, sans-serif", fontWeight: 700 }}
         >
           Recurring Billing Series & Invoices
         </h2>
         <p className="text-black text-[14px] leading-[22px] sm:text-[15px] sm:leading-[24px]">
-          A structured redesign of the recurring billing workflow, improving clarity, hierarchy, and merchant control.
+          A structured redesign of the recurring billing workflow, improving
+          clarity, hierarchy, and merchant control.
         </p>
       </div>
 

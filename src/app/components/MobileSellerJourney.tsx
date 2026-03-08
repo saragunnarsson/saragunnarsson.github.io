@@ -1,9 +1,9 @@
-import imgEllipse91 from "figma:asset/90008e966066e71cd3d854476de63f4bd5a3c713.png";
-import imgImage144 from "figma:asset/fe69bcc173270ef38c4afac121d0ff1f1dcbecad.png";
-import imgEstimateScreen from "figma:asset/9cdd76a6cbf24fad48fddef9449cf93b451887cc.png";
-import imgConfirmScreen from "figma:asset/ab8605fa58d4c481a011eea6d0eb68f0147d3cba.png";
-import imgBuyerScreen from "figma:asset/cc628af6983107aa1d4f8d1bd64887146e047949.png";
-import imgOfferScreen from "figma:asset/6285d119e74d5a989d2277ac0fead859edf77f52.png";
+import imgEllipse91 from "@assets/90008e966066e71cd3d854476de63f4bd5a3c713.png";
+import imgImage144 from "@assets/fe69bcc173270ef38c4afac121d0ff1f1dcbecad.png";
+import imgEstimateScreen from "@assets/9cdd76a6cbf24fad48fddef9449cf93b451887cc.png";
+import imgConfirmScreen from "@assets/ab8605fa58d4c481a011eea6d0eb68f0147d3cba.png";
+import imgBuyerScreen from "@assets/cc628af6983107aa1d4f8d1bd64887146e047949.png";
+import imgOfferScreen from "@assets/6285d119e74d5a989d2277ac0fead859edf77f52.png";
 import { ChevronDown } from "lucide-react";
 
 function DownArrow() {
@@ -11,7 +11,13 @@ function DownArrow() {
     <div className="flex justify-center py-[6px]">
       <div className="flex flex-col items-center">
         <div className="w-[2px] h-[24px] bg-black" />
-        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" className="-mt-[1px]">
+        <svg
+          width="12"
+          height="8"
+          viewBox="0 0 12 8"
+          fill="none"
+          className="-mt-[1px]"
+        >
           <path d="M6 8L0 0H12L6 8Z" fill="black" />
         </svg>
       </div>
@@ -29,7 +35,12 @@ function StepDescription({ children }: { children: React.ReactNode }) {
 
 export function MobileSellerJourney() {
   return (
-    <div className="flex flex-col items-center px-[24px] py-[40px]" style={{ backgroundImage: "linear-gradient(156deg, #E7F3FF 0%, #F3E7FF 100%)" }}>
+    <div
+      className="flex flex-col items-center px-[24px] py-[40px]"
+      style={{
+        backgroundImage: "linear-gradient(156deg, #E7F3FF 0%, #F3E7FF 100%)",
+      }}
+    >
       {/* Title */}
       <h3 className="font-['Lexend_Deca'] font-bold text-[24px] leading-[32px] text-[#0a0a0a] text-center mb-[28px]">
         Seller Journey
@@ -52,7 +63,8 @@ export function MobileSellerJourney() {
       {/* Step 1: Estimate */}
       <div className="w-full max-w-[340px] pt-[10px]">
         <StepDescription>
-          Amanda begins with a transparent market estimate, establishing clarity and confidence before moving forward.
+          Amanda begins with a transparent market estimate, establishing clarity
+          and confidence before moving forward.
         </StepDescription>
         <img
           src={imgEstimateScreen}
@@ -66,7 +78,8 @@ export function MobileSellerJourney() {
       {/* Step 2: Confirm Appointment */}
       <div className="w-full max-w-[340px] pt-[10px]">
         <StepDescription>
-          With expectations set, she books her vehicle pickup to initiate the selling process.
+          With expectations set, she books her vehicle pickup to initiate the
+          selling process.
         </StepDescription>
         <img
           src={imgConfirmScreen}
@@ -80,7 +93,8 @@ export function MobileSellerJourney() {
       {/* Step 3: Looking for buyer */}
       <div className="w-full max-w-[340px] pt-[10px]">
         <StepDescription>
-          Autozen activates its dealer network, creating competitive pressure to maximize value.
+          Autozen activates its dealer network, creating competitive pressure to
+          maximize value.
         </StepDescription>
         <img
           src={imgBuyerScreen}
@@ -94,7 +108,8 @@ export function MobileSellerJourney() {
       {/* Step 4: Your offer */}
       <div className="w-full max-w-[340px] pt-[10px]">
         <StepDescription>
-          She receives the strongest offer from the auction and retains full control over the final decision.
+          She receives the strongest offer from the auction and retains full
+          control over the final decision.
         </StepDescription>
         <img
           src={imgOfferScreen}
