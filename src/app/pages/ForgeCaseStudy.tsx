@@ -5,11 +5,10 @@ import svgPaths from "../../imports/svg-si7wdvwp4g";
 import SkandiUxuiLogo from "../../imports/SkandiUxuiLogo";
 import SkandiUxuiLogoWhite from "../../imports/SkandiUxuiLogoWhite";
 import { useState, useEffect } from "react";
-import imgForgeDesign from "@assets/f42cf35f18ecba4bbca996d4f87373602830732c.png";
-import imgForgeWebsite from "@assets/75adac05843b30fef4e2293fc3d842442f439f4f.png";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import Frame1408Background from "../../imports/Frame1408Background";
 import { usePreloadImages } from "../components/usePreloadImages";
+import { caseStudyImages } from "./caseStudyImages";
 
 interface TagProps {
   text: string;
@@ -44,7 +43,7 @@ export function ForgeCaseStudy() {
   const navigate = useNavigate();
 
   // Preload images immediately
-  usePreloadImages([imgForgeDesign, imgForgeWebsite]);
+  usePreloadImages([caseStudyImages.forgeDesign, caseStudyImages.forgeWebsite]);
 
   const handleWorkClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -317,9 +316,10 @@ export function ForgeCaseStudy() {
             {/* Image - at bottom on mobile, absolute positioned on desktop */}
             <div className="w-full max-w-[300px] md:max-w-[425px] mx-auto mt-[30px] lg:mt-0 lg:mx-0 lg:absolute lg:left-[680px] xl:left-[780px] lg:top-[-820px] lg:w-[383px]">
               <ImageWithFallback
-                src={imgForgeDesign}
+                src={caseStudyImages.forgeDesign}
                 alt="Forge brand identity design"
                 className="w-full h-auto"
+                sizes="(max-width: 767px) 300px, 425px"
                 loading="eager"
               />
             </div>
@@ -350,9 +350,10 @@ export function ForgeCaseStudy() {
                   Web Design & Brand Application
                 </h2>
                 <ImageWithFallback
-                  src={imgForgeWebsite}
+                  src={caseStudyImages.forgeWebsite}
                   alt="Forge website design"
                   className="w-full h-auto rounded-[16px] md:rounded-[24px] shadow-[0px_4px_24px_rgba(0,0,0,0.1)]"
+                  sizes="(max-width: 767px) calc(100vw - 48px), 770px"
                   loading="eager"
                 />
               </div>

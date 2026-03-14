@@ -9,20 +9,12 @@ import svgPathsrb53xbzjbv from "../../imports/svg-rb53xbzjbv";
 import svgPathsfxs9x9v4cy from "../../imports/svg-fxs9x9v4cy";
 import svgPaths8351tnyafa from "../../imports/svg-8351tnyafa";
 import svgPathsi1rkjovs27 from "../../imports/svg-i1rkjovs27";
-import imgImage7 from "@assets/a45a90b46f1a72f3d69feb9f0b27c0e3488eddc0.png";
-import imgImage22 from "@assets/b996682d6dd5ccade0cc1b24d89a2f5bc1216ac7.png";
-import imgNetCentsLogo from "@assets/34439fc65b27f7d46a22550912f851eb6fa2b020.png";
-import imgNetCentsInvoice from "@assets/ac1c428d77638327b9e42bc771b747d3da7d282d.png";
-import imgImage18 from "@assets/938c90793ca924289b46e37a1b7275a941cd216b.png";
-import imgImage16 from "@assets/ca2c4881055633445515f98bda2af9ee8e164230.png";
-import imgImage24 from "@assets/3a142c15e62500ebc6504a44e6e3b9579c15b8c1.png";
-import imgForgeWebsite from "@assets/c34225359a1aff7003664cea48ea13fdf869ba7f.png";
-import imgAvatar from "@assets/5f21ca821ce897ee63f273b82ebd953734bf322b.png";
-import imgIntroUi from "@assets/1117912c537834e67fd7274899254df76457af3d.png";
 import SkandiUxuiLogo from "../../imports/SkandiUxuiLogo";
 import SkandiUxuiLogoWhite from "../../imports/SkandiUxuiLogoWhite";
 import { useState, useEffect } from "react";
+import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { usePreloadImages } from "../components/usePreloadImages";
+import { landingPageImages } from "./landingPageImages";
 
 // Dashboard Icon Component
 function DashboardIcon() {
@@ -178,11 +170,11 @@ export function LandingPage() {
 
   // Preload work section thumbnails immediately
   usePreloadImages([
-    imgImage7,
-    imgImage22,
-    imgNetCentsInvoice,
-    imgForgeWebsite,
-    imgIntroUi,
+    landingPageImages.autozenCard,
+    landingPageImages.netCentsWidgetCard,
+    landingPageImages.netCentsInvoiceCard,
+    landingPageImages.forgeCard,
+    landingPageImages.introUi,
   ]);
 
   useEffect(() => {
@@ -399,10 +391,11 @@ export function LandingPage() {
               </div>
               <div className="relative mb-0 md:-mb-0">
                 <div className="rounded-3xl flex items-center justify-center px-0 md:px-12 md:aspect-square overflow-visible">
-                  <img
-                    src={imgIntroUi}
+                  <ImageWithFallback
+                    src={landingPageImages.introUi}
                     alt="Product design interface"
                     className="w-[137.5%] sm:w-[135%] md:w-[132%] lg:w-[129.4%] h-auto object-contain m-[0px] pointer-events-none select-none"
+                    sizes="(max-width: 767px) 100vw, 720px"
                     loading="eager"
                   />
                 </div>
@@ -541,10 +534,11 @@ export function LandingPage() {
                     </div>
                   </div>
                   <div className="rounded-[25.52px] overflow-hidden w-full md:w-[320px] md:max-w-[45%] lg:w-[380px] xl:w-[450px] h-[250px] sm:h-[280px] md:h-[320px] lg:h-[380px] xl:h-[433px] flex-shrink-0">
-                    <img
-                      src={imgImage7}
+                    <ImageWithFallback
+                      src={landingPageImages.autozenCard}
                       alt="Autozen project"
                       className="w-full h-full object-cover"
+                      sizes="(max-width: 767px) calc(100vw - 34px), (max-width: 1023px) 320px, 450px"
                       loading="eager"
                     />
                   </div>
@@ -558,10 +552,11 @@ export function LandingPage() {
                 <div className="bg-white rounded-[20px] sm:rounded-[30px] md:rounded-[40px] shadow-[0px_0px_13.985px_0px_rgba(21,20,72,0.08)] w-full hover:shadow-[0px_0px_20px_0px_rgba(21,20,72,0.12)] transition-all">
                   <div className="flex flex-col-reverse md:flex-row gap-6 sm:gap-7 md:gap-[68px] items-center px-[17px] sm:px-[28px] md:pl-[25px] md:pr-[50px] py-[30px] sm:py-[35px] md:py-[25px]">
                     <div className="bg-white rounded-[25.742px] p-0 md:p-8 w-full md:w-[320px] md:max-w-[45%] lg:w-[380px] xl:w-[451px] h-[250px] sm:h-[280px] md:h-[320px] lg:h-[360px] xl:h-[426px] flex items-center justify-center relative overflow-hidden flex-shrink-0">
-                      <img
-                        src={imgImage22}
+                      <ImageWithFallback
+                        src={landingPageImages.netCentsWidgetCard}
                         alt="NetCents Payment Widget"
                         className="w-full h-full object-contain relative z-10"
+                        sizes="(max-width: 767px) calc(100vw - 34px), (max-width: 1023px) 320px, 451px"
                         loading="eager"
                       />
                     </div>
@@ -673,10 +668,11 @@ export function LandingPage() {
                       </div>
                     </div>
                     <div className="rounded-[25.52px] overflow-hidden w-full md:w-[320px] md:max-w-[45%] lg:w-[380px] xl:w-[450px] h-[250px] sm:h-[280px] md:h-[320px] lg:h-[380px] xl:h-[433px] flex-shrink-0 flex items-center justify-center bg-[#ffffff] p-[0px]">
-                      <img
-                        src={imgNetCentsInvoice}
+                      <ImageWithFallback
+                        src={landingPageImages.netCentsInvoiceCard}
                         alt="NetCents Recurring Invoices"
                         className="w-full h-full object-contain"
+                        sizes="(max-width: 767px) calc(100vw - 34px), (max-width: 1023px) 320px, 450px"
                         loading="eager"
                       />
                     </div>
@@ -691,10 +687,11 @@ export function LandingPage() {
                 <div className="bg-white rounded-[20px] sm:rounded-[30px] md:rounded-[40px] shadow-[0px_0px_13.985px_0px_rgba(21,20,72,0.08)] w-full">
                   <div className="flex flex-col-reverse md:flex-row gap-6 sm:gap-7 md:gap-[68px] items-center px-[17px] sm:px-[28px] md:pl-[25px] md:pr-[50px] py-[30px] sm:py-[35px] md:py-[25px]">
                     <div className="bg-white rounded-[25.742px] p-0 md:p-8 w-full md:w-[320px] md:max-w-[45%] lg:w-[380px] xl:w-[451px] h-[250px] sm:h-[280px] md:h-[320px] lg:h-[360px] xl:h-[426px] flex items-center justify-center relative overflow-hidden flex-shrink-0">
-                      <img
-                        src={imgForgeWebsite}
+                      <ImageWithFallback
+                        src={landingPageImages.forgeCard}
                         alt="Forge project"
                         className="w-full h-full object-contain relative z-10"
+                        sizes="(max-width: 767px) calc(100vw - 34px), (max-width: 1023px) 320px, 451px"
                         loading="eager"
                       />
                     </div>

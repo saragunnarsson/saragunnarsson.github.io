@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import svgPaths from "./svg-fpmirmdv67";
-import imgNetCentsLogomarkColor128Px from "@assets/34439fc65b27f7d46a22550912f851eb6fa2b020.png";
+import { frame1408Images } from "./frame1408Images";
 
 function Wrapper1({ children }: React.PropsWithChildren<{}>) {
   return (
@@ -288,7 +288,7 @@ function NetCentsLogomarkColor128PxImage() {
       <img
         alt=""
         className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-        src={imgNetCentsLogomarkColor128Px}
+        src={frame1408Images.logomark}
       />
     </div>
   );

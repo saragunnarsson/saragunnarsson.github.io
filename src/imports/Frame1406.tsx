@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import svgPaths from "./svg-h83xvxr80i";
-import imgImage144 from "@assets/fe69bcc173270ef38c4afac121d0ff1f1dcbecad.png";
-import imgEllipse91 from "@assets/90008e966066e71cd3d854476de63f4bd5a3c713.png";
+import { frame1406Images } from "./frame1406Images";
 type Frame1296Helper1Props = {
   additionalClassNames?: string;
 };
@@ -478,7 +477,7 @@ export default function Frame() {
                   <img
                     alt=""
                     className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-                    src={imgImage144}
+                    src={frame1406Images.autozenBadge}
                   />
                 </div>
               </div>
@@ -889,7 +888,7 @@ export default function Frame() {
             alt=""
             className="absolute block max-w-none size-full"
             height="112"
-            src={imgEllipse91}
+            src={frame1406Images.avatar}
             width="112"
           />
         </div>

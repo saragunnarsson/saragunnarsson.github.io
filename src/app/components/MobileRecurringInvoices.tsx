@@ -1,7 +1,5 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import imgInvoicesList from "@assets/4e61a37dc6df489bb2855e6f2664021adb84c291.png";
-import imgRecurringSeries from "@assets/da8d318aa15816a8337fc94481826106a187b959.png";
-import imgRecurringInvoice from "@assets/d932143eaea2ef56a7a3d4f69717cb95276d3116.png";
+import { mobileRecurringInvoicesImages } from "./mobileRecurringInvoicesImages";
 
 export function MobileRecurringInvoices() {
   return (
@@ -25,27 +23,33 @@ export function MobileRecurringInvoices() {
         {/* Screen 1: Invoices List */}
         <div className="w-full rounded-[16px] shadow-[0px_2px_12px_rgba(0,0,0,0.08)] overflow-hidden bg-white">
           <ImageWithFallback
-            src={imgInvoicesList}
+            src={mobileRecurringInvoicesImages.invoicesList}
             alt="Invoices list view"
             className="w-full h-auto"
+            sizes="(max-width: 368px) calc(100vw - 48px), 320px"
+            loading="eager"
           />
         </div>
 
         {/* Screen 2: Recurring Series */}
         <div className="w-full rounded-[16px] shadow-[0px_2px_12px_rgba(0,0,0,0.08)] overflow-hidden bg-white">
           <ImageWithFallback
-            src={imgRecurringSeries}
+            src={mobileRecurringInvoicesImages.recurringSeries}
             alt="Recurring series detail view"
             className="w-full h-auto"
+            sizes="(max-width: 368px) calc(100vw - 48px), 320px"
+            loading="lazy"
           />
         </div>
 
         {/* Screen 3: Recurring Invoice */}
         <div className="w-full rounded-[16px] shadow-[0px_2px_12px_rgba(0,0,0,0.08)] overflow-hidden bg-white">
           <ImageWithFallback
-            src={imgRecurringInvoice}
+            src={mobileRecurringInvoicesImages.recurringInvoice}
             alt="Recurring invoice detail view"
             className="w-full h-auto"
+            sizes="(max-width: 368px) calc(100vw - 48px), 320px"
+            loading="lazy"
           />
         </div>
       </div>

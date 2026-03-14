@@ -1,8 +1,5 @@
-import imgEllipse91 from "@assets/f190729710350942f45495e70546aa20a9a3f642.png";
-import imgShoppingCart from "@assets/5519c15cc95377e7fff7a20027380824f59f1c3d.png";
-import imgSelectCurrency from "@assets/845190d0b4c9bc9ca1e0f4ced39d1b35eca2222d.png";
-import imgPaymentInterface from "@assets/ef6cd9620de627a4d78d3ff8a1839b6a30b9ed2c.png";
-import imgConfirmation from "@assets/b339026a24c43ae435aae63392ae94079258e4c7.png";
+import { ResponsiveImage } from "@/app/components/ResponsiveImage";
+import { mobileCryptoCheckoutImages } from "@/app/components/mobileCryptoCheckoutImages";
 
 function DownArrow() {
   return (
@@ -46,10 +43,13 @@ export function MobileCryptoCheckout() {
 
       {/* Josh intro */}
       <div className="flex flex-col items-center text-center">
-        <img
-          src={imgEllipse91}
+        <ResponsiveImage
+          image={mobileCryptoCheckoutImages.avatar}
           alt="Josh"
+          sizes="80px"
           className="w-[80px] h-[80px] rounded-full object-cover"
+          loading="eager"
+          fetchPriority="high"
         />
         <p className="font-['Inter'] font-semibold text-[18px] leading-[24px] text-black mt-[16px] max-w-[260px]">
           Josh is buying a watch and wants to pay with cryptocurrency
@@ -64,10 +64,12 @@ export function MobileCryptoCheckout() {
           At checkout, Josh selects cryptocurrency as his preferred payment
           method.
         </StepDescription>
-        <img
-          src={imgShoppingCart}
+        <ResponsiveImage
+          image={mobileCryptoCheckoutImages.shoppingCart}
           alt="Watches.com shopping cart with Pay with Credit Card and Pay with Cryptocurrency buttons"
+          sizes="(max-width: 388px) calc(100vw - 48px), 340px"
           className="w-full rounded-[12px]"
+          loading="eager"
         />
       </div>
 
@@ -79,10 +81,12 @@ export function MobileCryptoCheckout() {
           A secure redirect to NetCents presents supported currencies, allowing
           him to select Ethereum.
         </StepDescription>
-        <img
-          src={imgSelectCurrency}
+        <ResponsiveImage
+          image={mobileCryptoCheckoutImages.selectCurrency}
           alt="NetCents currency selection screen showing Bitcoin, Ethereum, Litecoin, Verge, Bitcoin Cash, and Netcents wallet options"
+          sizes="(max-width: 388px) calc(100vw - 48px), 340px"
           className="w-full rounded-[12px]"
+          loading="lazy"
         />
       </div>
 
@@ -94,10 +98,12 @@ export function MobileCryptoCheckout() {
           A structured payment interface simplifies wallet connection and guides
           completion.
         </StepDescription>
-        <img
-          src={imgPaymentInterface}
+        <ResponsiveImage
+          image={mobileCryptoCheckoutImages.paymentInterface}
           alt="NetCents payment interface showing QR code, Ethereum amount, and countdown timer"
+          sizes="(max-width: 388px) calc(100vw - 48px), 340px"
           className="w-full rounded-[12px]"
+          loading="lazy"
         />
       </div>
 
@@ -109,10 +115,12 @@ export function MobileCryptoCheckout() {
           A clear confirmation state reinforces trust before returning Josh to
           the checkout flow.
         </StepDescription>
-        <img
-          src={imgConfirmation}
+        <ResponsiveImage
+          image={mobileCryptoCheckoutImages.confirmation}
           alt="Thank You For Your Payment confirmation screen with checkmark"
+          sizes="(max-width: 388px) calc(100vw - 48px), 340px"
           className="w-full rounded-[12px]"
+          loading="lazy"
         />
       </div>
     </div>

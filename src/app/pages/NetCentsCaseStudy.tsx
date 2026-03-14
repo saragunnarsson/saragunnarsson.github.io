@@ -7,10 +7,10 @@ import SkandiUxuiLogoWhite from "../../imports/SkandiUxuiLogoWhite";
 import { useState, useEffect } from "react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { usePreloadImages } from "../components/usePreloadImages";
-import netCentsImage from "@assets/b550a68f6e40dfbd1b7442612a007a4b4fcc075a.png";
 import Frame1407 from "../../imports/Frame1407";
 import Frame1406BackgroundNetCents from "../../imports/Frame1406BackgroundNetCents";
 import { MobileCryptoCheckout } from "../components/MobileCryptoCheckout";
+import { caseStudyImages } from "./caseStudyImages";
 
 interface TagProps {
   text: string;
@@ -49,7 +49,7 @@ export function NetCentsCaseStudy() {
   const navigate = useNavigate();
 
   // Preload images immediately
-  usePreloadImages([netCentsImage]);
+  usePreloadImages([caseStudyImages.netCentsWidget]);
 
   const handleWorkClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -330,9 +330,10 @@ export function NetCentsCaseStudy() {
             {/* Image - at bottom on mobile, absolute positioned on desktop */}
             <div className="w-full max-w-[300px] md:max-w-[400px] mx-auto mt-[30px] lg:mt-0 lg:mx-0 lg:absolute lg:left-[680px] xl:left-[780px] lg:top-[-820px] lg:w-[384px]">
               <ImageWithFallback
-                src={netCentsImage}
+                src={caseStudyImages.netCentsWidget}
                 alt="NetCents payment interface"
                 className="w-full h-auto rounded-[20px] lg:translate-x-[-20px] lg:translate-y-[-30px] xl:translate-x-0 xl:translate-y-0"
+                sizes="(max-width: 767px) 300px, 400px"
                 loading="eager"
               />
             </div>

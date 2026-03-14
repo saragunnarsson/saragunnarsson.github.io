@@ -2,8 +2,6 @@ import { Link, useNavigate } from "react-router";
 import { Mail } from "lucide-react";
 import { AnimatedSection } from "../components/AnimatedSection";
 import svgPaths from "../../imports/svg-si7wdvwp4g";
-import imgImage7 from "@assets/a45a90b46f1a72f3d69feb9f0b27c0e3488eddc0.png";
-import imgAutozenPhone from "@assets/ac121c8480b9c211e8dade76bf8abe69216bffbc.png";
 import SkandiUxuiLogo from "../../imports/SkandiUxuiLogo";
 import SkandiUxuiLogoWhite from "../../imports/SkandiUxuiLogoWhite";
 import { useState, useEffect } from "react";
@@ -12,6 +10,7 @@ import { usePreloadImages } from "../components/usePreloadImages";
 import Frame1406 from "../../imports/Frame1406";
 import Frame1406Background from "../../imports/Frame1406Background";
 import { MobileSellerJourney } from "../components/MobileSellerJourney";
+import { caseStudyImages } from "./caseStudyImages";
 
 interface TagProps {
   text: string;
@@ -50,7 +49,7 @@ export function AutozenCaseStudy() {
   const navigate = useNavigate();
 
   // Preload images immediately
-  usePreloadImages([imgImage7, imgAutozenPhone]);
+  usePreloadImages([caseStudyImages.autozenPhone]);
 
   const handleWorkClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -335,10 +334,11 @@ export function AutozenCaseStudy() {
             {/* Image - at bottom on mobile, absolute positioned on desktop */}
             <div className="w-full max-w-[300px] md:max-w-[400px] mx-auto mt-[30px] lg:mt-0 lg:mx-0 lg:absolute lg:left-[640px] xl:left-[780px] lg:top-[-850px] xl:top-[-850px] lg:w-[384px]">
               <ImageWithFallback
-                src={imgAutozenPhone}
+                src={caseStudyImages.autozenPhone}
                 alt="Autozen project interface"
                 className="w-full h-auto lg:translate-x-[40px] xl:translate-x-[45px] xl:translate-y-[10px]"
                 style={{ objectPosition: "26.05% 5.51%" }}
+                sizes="(max-width: 767px) 300px, 400px"
                 loading="eager"
               />
             </div>

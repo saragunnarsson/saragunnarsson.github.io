@@ -9,8 +9,8 @@ import svgPaths from "../../imports/svg-si7wdvwp4g";
 import SkandiUxuiLogo from "../../imports/SkandiUxuiLogo";
 import SkandiUxuiLogoWhite from "../../imports/SkandiUxuiLogoWhite";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
-import imgNetCentsInvoice from "@assets/01b6af83a1f0b019ce633d7046079c734780ef0f.png";
 import { usePreloadImages } from "../components/usePreloadImages";
+import { caseStudyImages } from "./caseStudyImages";
 
 interface TagProps {
   text: string;
@@ -95,7 +95,7 @@ export function NetCentsRecurringInvoices() {
     };
   }, []);
 
-  usePreloadImages([imgNetCentsInvoice]);
+  usePreloadImages([caseStudyImages.netCentsRecurringInvoice]);
 
   return (
     <div className="bg-[#fafbff] min-h-screen relative overflow-x-hidden">
@@ -327,9 +327,10 @@ export function NetCentsRecurringInvoices() {
             {/* Image - at bottom on mobile, absolute positioned on desktop */}
             <div className="w-full max-w-[300px] md:max-w-[400px] mx-auto mt-[30px] lg:mt-0 lg:mx-0 lg:absolute lg:left-[640px] xl:left-[780px] lg:top-[-850px] xl:top-[-850px] lg:w-[384px]">
               <ImageWithFallback
-                src={imgNetCentsInvoice}
+                src={caseStudyImages.netCentsRecurringInvoice}
                 alt="NetCents Recurring Invoices"
                 className="w-full h-auto xl:translate-x-[45px]"
+                sizes="(max-width: 767px) 300px, 400px"
                 loading="eager"
               />
             </div>

@@ -1,12 +1,6 @@
 import clsx from "clsx";
 import svgPaths from "./svg-20uvdanggn";
-import imgVergeSymbolWhiteLogo1 from "@assets/ed3a894b35bf9a83db39e490a9f89e3747a8e119.png";
-import imgPoweredByNetCents from "@assets/dafa37baaa3a3cda88912a898e73090502516b2e.png";
-import imgNetcentsLogoCorporateRgbM from "@assets/3a224c721cb7bd8e46a0fb1a36e21c03f91be90c.png";
-import imgImage from "@assets/23c5856333a3c3a29069c9f05ba12924c423d2b3.png";
-import imgImage1 from "@assets/25e9e850dcfeb105941f979fab4b50915e8c52a0.png";
-import imgImage2 from "@assets/a38ce0bc829c554cea3fbe83d4cedb485c329474.png";
-import imgEllipse91 from "@assets/f190729710350942f45495e70546aa20a9a3f642.png";
+import { frame1407Images } from "./frame1407Images";
 type SelectChevronRightProps = {
   additionalClassNames?: string;
 };
@@ -53,7 +47,7 @@ function NetcentsLogoCorporateRgbMImage({
       <img
         alt=""
         className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-        src={imgNetcentsLogoCorporateRgbM}
+        src={frame1407Images.corporateLogo}
       />
     </div>
   );
@@ -281,7 +275,7 @@ export default function Frame() {
               <img
                 alt=""
                 className="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-                src={imgVergeSymbolWhiteLogo1}
+                src={frame1407Images.vergeLogo}
               />
             </div>
           </div>
@@ -326,7 +320,7 @@ export default function Frame() {
             <img
               alt=""
               className="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-              src={imgPoweredByNetCents}
+              src={frame1407Images.poweredBy}
             />
           </div>
           <div
@@ -407,7 +401,7 @@ export default function Frame() {
                     <img
                       alt=""
                       className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-                      src={imgImage}
+                    src={frame1407Images.qrCode}
                     />
                   </div>
                 </div>
@@ -419,7 +413,7 @@ export default function Frame() {
                 <img
                   alt=""
                   className="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-                  src={imgPoweredByNetCents}
+                  src={frame1407Images.poweredBy}
                 />
               </div>
               <div
@@ -607,7 +601,7 @@ export default function Frame() {
                   <img
                     alt=""
                     className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-                    src={imgImage1}
+                  src={frame1407Images.successIcon}
                   />
                 </div>
               </div>
@@ -685,7 +679,7 @@ export default function Frame() {
               <img
                 alt=""
                 className="absolute inset-0 max-w-none object-contain pointer-events-none size-full"
-                src={imgPoweredByNetCents}
+                src={frame1407Images.poweredBy}
               />
             </div>
             <div
@@ -743,7 +737,7 @@ export default function Frame() {
                 <img
                   alt=""
                   className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-                  src={imgImage2}
+                  src={frame1407Images.confirmationImage}
                 />
               </div>
               <p className="capitalize font-['Gibson:SemiBold',sans-serif] leading-[1.273] min-w-full not-italic relative shrink-0 text-[10.182px] text-black text-center w-[min-content] whitespace-pre-wrap">
@@ -937,7 +931,7 @@ export default function Frame() {
               alt=""
               className="absolute block max-w-none size-full"
               height="131"
-              src={imgEllipse91}
+              src={frame1407Images.avatar}
               width="131"
             />
           </div>

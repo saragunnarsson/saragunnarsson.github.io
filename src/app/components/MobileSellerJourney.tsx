@@ -1,10 +1,5 @@
-import imgEllipse91 from "@assets/90008e966066e71cd3d854476de63f4bd5a3c713.png";
-import imgImage144 from "@assets/fe69bcc173270ef38c4afac121d0ff1f1dcbecad.png";
-import imgEstimateScreen from "@assets/9cdd76a6cbf24fad48fddef9449cf93b451887cc.png";
-import imgConfirmScreen from "@assets/ab8605fa58d4c481a011eea6d0eb68f0147d3cba.png";
-import imgBuyerScreen from "@assets/cc628af6983107aa1d4f8d1bd64887146e047949.png";
-import imgOfferScreen from "@assets/6285d119e74d5a989d2277ac0fead859edf77f52.png";
-import { ChevronDown } from "lucide-react";
+import { ResponsiveImage } from "@/app/components/ResponsiveImage";
+import { mobileSellerJourneyImages } from "@/app/components/mobileSellerJourneyImages";
 
 function DownArrow() {
   return (
@@ -48,10 +43,13 @@ export function MobileSellerJourney() {
 
       {/* Amanda intro */}
       <div className="flex flex-col items-center text-center">
-        <img
-          src={imgEllipse91}
+        <ResponsiveImage
+          image={mobileSellerJourneyImages.avatar}
           alt="Amanda"
+          sizes="80px"
           className="w-[80px] h-[80px] rounded-full object-cover"
+          loading="eager"
+          fetchPriority="high"
         />
         <p className="font-['Inter'] font-semibold text-[18px] leading-[24px] text-black mt-[16px] max-w-[240px]">
           Amanda is selling her car with Autozen
@@ -66,10 +64,12 @@ export function MobileSellerJourney() {
           Amanda begins with a transparent market estimate, establishing clarity
           and confidence before moving forward.
         </StepDescription>
-        <img
-          src={imgEstimateScreen}
+        <ResponsiveImage
+          image={mobileSellerJourneyImages.estimate}
           alt="Autozen estimate screen showing 2017 Honda Civic with estimated value range of $31,000 - $33,000"
+          sizes="(max-width: 388px) calc(100vw - 48px), 340px"
           className="w-full rounded-[12px]"
+          loading="eager"
         />
       </div>
 
@@ -81,10 +81,12 @@ export function MobileSellerJourney() {
           With expectations set, she books her vehicle pickup to initiate the
           selling process.
         </StepDescription>
-        <img
-          src={imgConfirmScreen}
+        <ResponsiveImage
+          image={mobileSellerJourneyImages.confirm}
           alt="Confirm Appointment screen showing Step 3/3 with date March 23, 2022 and location details"
+          sizes="(max-width: 388px) calc(100vw - 48px), 340px"
           className="w-full rounded-[12px]"
+          loading="lazy"
         />
       </div>
 
@@ -96,10 +98,12 @@ export function MobileSellerJourney() {
           Autozen activates its dealer network, creating competitive pressure to
           maximize value.
         </StepDescription>
-        <img
-          src={imgBuyerScreen}
+        <ResponsiveImage
+          image={mobileSellerJourneyImages.buyer}
           alt="Looking for a buyer screen with stop showing vehicle option"
+          sizes="(max-width: 388px) calc(100vw - 48px), 340px"
           className="w-full rounded-[12px]"
+          loading="lazy"
         />
       </div>
 
@@ -111,10 +115,12 @@ export function MobileSellerJourney() {
           She receives the strongest offer from the auction and retains full
           control over the final decision.
         </StepDescription>
-        <img
-          src={imgOfferScreen}
+        <ResponsiveImage
+          image={mobileSellerJourneyImages.offer}
           alt="Your offer screen showing $31,300 with accept and reject options"
+          sizes="(max-width: 388px) calc(100vw - 48px), 340px"
           className="w-full rounded-[12px]"
+          loading="lazy"
         />
       </div>
     </div>
