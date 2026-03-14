@@ -550,7 +550,7 @@ function Frame93() {
 
 function SkandiUxuiLogo() {
   return (
-    <div className="relative shrink-0 w-[127px]" data-name="skandi-uxui-logo">
+    <div className="relative shrink-0 w-[127px]" data-name="qqskandi-uxui-logo">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[9px] items-start relative w-full">
         <p className="font-['Roboto_Mono:Medium',sans-serif] font-medium leading-[32px] relative shrink-0 text-[#2f1658] text-[35px] w-full whitespace-pre-wrap">
           Skandi
