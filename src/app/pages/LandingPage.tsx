@@ -391,12 +391,12 @@ export function LandingPage() {
                   solutions.
                 </p>
               </div>
-              <div className="relative mb-0 md:-mb-0">
-                <div className="rounded-3xl flex items-center justify-center px-0 md:px-12 md:aspect-square overflow-visible">
+              <div className="relative mb-0 min-w-0 md:-mb-0">
+                <div className="rounded-3xl flex items-center justify-center overflow-hidden px-0 md:px-12 md:aspect-square">
                   <ImageWithFallback
                     src={landingPageImages.introUi}
                     alt="Product design interface"
-                    className="w-[137.5%] sm:w-[135%] md:w-[132%] lg:w-[129.4%] h-auto object-contain m-[0px] pointer-events-none select-none"
+                    className="pointer-events-none m-[0px] block h-full w-full max-w-full object-contain select-none"
                     sizes="(max-width: 767px) 100vw, 720px"
                     loading="eager"
                   />

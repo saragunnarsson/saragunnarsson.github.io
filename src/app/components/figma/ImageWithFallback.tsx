@@ -30,7 +30,7 @@ export function ImageWithFallback(props: ImageWithFallbackProps) {
 
   return didError ? (
     <div
-      className={`inline-block bg-gray-100 text-center align-middle ${className ?? ''}`}
+      className={`block h-full w-full max-w-full bg-gray-100 text-center align-middle ${className ?? ''}`}
       style={style}
     >
       <div className="flex items-center justify-center w-full h-full">
@@ -38,7 +38,7 @@ export function ImageWithFallback(props: ImageWithFallbackProps) {
       </div>
     </div>
   ) : isResponsivePictureData(src) ? (
-    <picture>
+    <picture className="block h-full w-full max-w-full">
       {Object.entries(src.sources)
         .sort(([left], [right]) => {
           const leftIndex = SOURCE_ORDER.indexOf(left)
