@@ -304,6 +304,8 @@ export function LandingPage() {
                 background:
                   "linear-gradient(152.569deg, rgb(239, 224, 255) 0%, rgb(220, 234, 255) 50%, rgb(255, 229, 229) 100%)",
                 maxWidth: "2000px",
+                display: "flex",
+                justifyContent: "center",
               }}
             >
               <div className="max-w-4xl relative">
@@ -555,7 +557,7 @@ export function LandingPage() {
                       <ImageWithFallback
                         src={landingPageImages.netCentsWidgetCard}
                         alt="NetCents Payment Widget"
-                        className="w-full h-full object-contain relative z-10"
+                        className="w-[80%] h-[80%] object-contain relative z-10"
                         sizes="(max-width: 767px) calc(100vw - 34px), (max-width: 1023px) 320px, 451px"
                         loading="eager"
                       />
@@ -671,7 +673,7 @@ export function LandingPage() {
                       <ImageWithFallback
                         src={landingPageImages.netCentsInvoiceCard}
                         alt="NetCents Recurring Invoices"
-                        className="w-full h-full object-contain"
+                        className="w-[80%] h-[80%] object-contain"
                         sizes="(max-width: 767px) calc(100vw - 34px), (max-width: 1023px) 320px, 450px"
                         loading="eager"
                       />
