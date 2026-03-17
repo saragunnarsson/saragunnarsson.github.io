@@ -221,8 +221,7 @@ export function LandingPage() {
         className={`fixed top-0 left-0 right-0 z-[100] bg-white/5 backdrop-blur-sm transition-all ${isScrolled ? "border-b border-white/30 shadow-sm" : ""}`}
       >
         <div
-          className={`mx-auto flex items-center justify-between lg:mx-[75px] ${isScrolled ? "md:mt-[8px]" : "md:mt-[18px]"} md:mb-[0px] px-[26px] sm:px-[40px] md:px-[60px] lg:px-[32px] py-[12px]`}
-          style={{ maxWidth: "2000px" }}
+          className={`mx-auto flex w-full max-w-[1384px] items-center justify-between ${isScrolled ? "md:mt-[8px]" : "md:mt-[18px]"} md:mb-[0px] px-[26px] py-[12px] sm:px-[40px] md:px-[60px] lg:w-[calc(100%-48px)] lg:px-[150px] xl:w-[calc(100%-56px)] xl:px-[189px]`}
         >
           <Link to="/" className="block">
             <div className="scale-[0.7] origin-left sm:scale-[0.85] md:scale-100">
@@ -295,8 +294,8 @@ export function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="px-[16px] sm:px-[24px] pt-[80px] sm:pt-[20px] pb-[30px] md:pt-0 md:pb-0">
-        <div className="mx-auto" style={{ maxWidth: "calc(2000px - 96px)" }}>
+      <section className="px-[16px] pt-[80px] pb-[30px] sm:px-[24px] sm:pt-[20px] md:pt-0 md:pb-0 xl:px-[28px]">
+        <div className="mx-auto max-w-[1384px]">
           <AnimatedSection>
             <div
               className="rounded-[30px] px-[28px] py-[40px] sm:rounded-[50px] sm:px-[48px] sm:py-[60px] md:rounded-[70px] md:px-[80px] md:pt-[80px] md:pb-[100px] lg:rounded-[80px] lg:pl-[150px] lg:pr-[80px] lg:pt-[120px] lg:pb-[180px] xl:pl-[189px] xl:pt-[134px] xl:pb-[200px] sm:mt-[90px] md:mt-[100px] lg:mt-[115px]"
@@ -304,8 +303,6 @@ export function LandingPage() {
                 background:
                   "linear-gradient(152.569deg, rgb(239, 224, 255) 0%, rgb(220, 234, 255) 50%, rgb(255, 229, 229) 100%)",
                 maxWidth: "2000px",
-                display: "flex",
-                justifyContent: "center",
               }}
             >
               <div className="max-w-4xl relative">
@@ -372,12 +369,12 @@ export function LandingPage() {
       </section>
 
       {/* About Section */}
-      <section className="px-[35px] sm:px-[48px] pt-[5px] pb-[30px] sm:pt-[30px] md:pt-[60px] md:pb-[60px] sm:-mt-[80px] md:-mt-[80px] lg:-mt-[120px] xl:-mt-[150px] relative z-20">
-        <div className="max-w-6xl mx-auto">
+      <section className="relative z-20 px-[35px] pt-[5px] pb-[30px] sm:px-[48px] sm:pt-[30px] md:pt-[60px] md:pb-[60px] lg:px-[24px] lg:-mt-[96px] xl:px-[28px] xl:-mt-[50px] sm:-mt-[80px] md:-mt-[80px]">
+        <div className="mx-auto max-w-[1384px] lg:px-[150px] xl:px-[189px]">
           <AnimatedSection>
-            <div className="grid gap-[16px] sm:gap-[32px] md:gap-12 lg:gap-20 md:grid-cols-2 md:items-center">
+            <div className="grid gap-[16px] sm:gap-[32px] md:gap-12 lg:gap-20 md:grid-cols-2 md:items-start">
               <div>
-                <h2 className="text-[24px] leading-[30px] sm:text-[30px] sm:leading-[38px] md:text-[35px] md:leading-[44px] lg:text-[40px] lg:leading-[51.6px] font-bold text-gray-900 mx-[0px] mt-[30px] sm:mt-[40px] md:mt-[80px] lg:mt-[100px] xl:mt-[40px] mb-[24px] sm:mb-[28px]">
+                <h2 className="text-[24px] leading-[30px] sm:text-[30px] sm:leading-[38px] md:text-[35px] md:leading-[44px] lg:text-[40px] lg:leading-[51.6px] font-bold text-gray-900 mx-[0px] mt-[30px] sm:mt-[40px] md:mt-[80px] lg:mt-[100px] xl:mt-[124px] mb-[24px] sm:mb-[28px]">
                   I'm Sara, a product and UX designer based in Victoria, BC.
                 </h2>
                 <p className="text-[16px] leading-[26px] sm:text-[17px] sm:leading-[27px] md:text-[18px] md:leading-7 text-[#364153] mb-[16px] sm:mb-[20px] md:mb-6">
@@ -391,13 +388,13 @@ export function LandingPage() {
                   solutions.
                 </p>
               </div>
-              <div className="relative mb-0 min-w-0 md:-mb-0">
-                <div className="rounded-3xl flex items-center justify-center overflow-hidden px-0 md:px-12 md:aspect-square">
+              <div className="relative min-w-0 md:ml-auto md:-mt-[36px] lg:-mt-[64px] xl:w-[533px] xl:max-w-[533px]">
+                <div className="mx-auto flex w-full max-w-[360px] items-start justify-center overflow-visible sm:max-w-[430px] md:max-w-[460px] lg:max-w-[500px] xl:max-w-[533px]">
                   <ImageWithFallback
                     src={landingPageImages.introUi}
                     alt="Product design interface"
-                    className="pointer-events-none m-[0px] block h-full w-full max-w-full object-contain select-none"
-                    sizes="(max-width: 767px) 100vw, 720px"
+                    className="pointer-events-none block h-auto w-full max-w-full object-contain select-none"
+                    sizes="(max-width: 767px) 100vw, (max-width: 1279px) 42vw, 533px"
                     loading="eager"
                   />
                 </div>
