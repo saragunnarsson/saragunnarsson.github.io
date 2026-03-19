@@ -96,11 +96,10 @@ export function ForgeCaseStudy() {
     <div className="bg-[#fafbff] min-h-screen relative overflow-x-hidden">
       {/* Navbar */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all ${isScrolled ? "bg-white/5 backdrop-blur-sm border-b border-white/30 shadow-sm" : ""}`}
+        className={`fixed top-0 left-0 right-0 z-[100] bg-white/5 backdrop-blur-sm transition-all ${isScrolled ? "border-b border-white/30 shadow-sm" : ""}`}
       >
         <div
-          className={`mx-auto flex items-center justify-between lg:mx-[75px] ${isScrolled ? "md:mt-[8px]" : "md:mt-[18px]"} md:mb-[0px] px-[26px] sm:px-[40px] md:px-[60px] lg:px-[32px] py-[12px]`}
-          style={{ maxWidth: "2000px" }}
+          className={`mx-auto flex w-full max-w-[1384px] items-center justify-between ${isScrolled ? "md:mt-[8px]" : "md:mt-[18px]"} md:mb-[0px] px-[26px] py-[12px] sm:px-[40px] md:px-[60px] lg:w-[calc(100%-48px)] lg:px-[85px] xl:w-[calc(100%-56px)] xl:px-[85px]`}
         >
           <Link to="/" className="block">
             <div className="scale-[0.7] origin-left sm:scale-[0.85] md:scale-100">

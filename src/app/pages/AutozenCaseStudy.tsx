@@ -2,15 +2,37 @@ import { Link, useNavigate } from "react-router";
 import { Mail } from "lucide-react";
 import { AnimatedSection } from "../components/AnimatedSection";
 import svgPaths from "../../imports/svg-si7wdvwp4g";
+import sellerJourneySvgPaths from "../../imports/svg-h83xvxr80i";
 import SkandiUxuiLogo from "../../imports/SkandiUxuiLogo";
 import SkandiUxuiLogoWhite from "../../imports/SkandiUxuiLogoWhite";
 import { useState, useEffect } from "react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import {
+  ResponsiveImage,
+  type ResponsivePictureData,
+} from "../components/ResponsiveImage";
 import { usePreloadImages } from "../components/usePreloadImages";
-import Frame1406 from "../../imports/Frame1406";
-import Frame1406Background from "../../imports/Frame1406Background";
 import { MobileSellerJourney } from "../components/MobileSellerJourney";
 import { caseStudyImages } from "./caseStudyImages";
+
+// @ts-expect-error Vite resolves imagetools asset queries at build time.
+import imgSellerJourneyAvatar from "@assets/90008e966066e71cd3d854476de63f4bd5a3c713.png?w=128;256&format=avif;webp;png&as=picture";
+// @ts-expect-error Vite resolves imagetools asset queries at build time.
+import imgSellerJourneyEstimate from "@assets/9cdd76a6cbf24fad48fddef9449cf93b451887cc.png?w=400;800&format=avif;webp;png&as=picture";
+// @ts-expect-error Vite resolves imagetools asset queries at build time.
+import imgSellerJourneyConfirm from "@assets/ab8605fa58d4c481a011eea6d0eb68f0147d3cba.png?w=380;760&format=avif;webp;png&as=picture";
+// @ts-expect-error Vite resolves imagetools asset queries at build time.
+import imgSellerJourneyBuyer from "@assets/cc628af6983107aa1d4f8d1bd64887146e047949.png?w=296;592&format=avif;webp;png&as=picture";
+// @ts-expect-error Vite resolves imagetools asset queries at build time.
+import imgSellerJourneyOffer from "@assets/6285d119e74d5a989d2277ac0fead859edf77f52.png?w=300;600&format=avif;webp;png&as=picture";
+
+const sellerJourneyImages = {
+  avatar: imgSellerJourneyAvatar as ResponsivePictureData,
+  estimate: imgSellerJourneyEstimate as ResponsivePictureData,
+  confirm: imgSellerJourneyConfirm as ResponsivePictureData,
+  buyer: imgSellerJourneyBuyer as ResponsivePictureData,
+  offer: imgSellerJourneyOffer as ResponsivePictureData,
+};
 
 interface TagProps {
   text: string;
@@ -38,6 +60,198 @@ function Tag({ text }: TagProps) {
       <p className="font-medium shrink-0 text-[#0a0a0a] text-center text-[13px] leading-[20px] sm:text-[15px] sm:leading-[23px]">
         {text}
       </p>
+    </div>
+  );
+}
+
+function DesktopSellerJourney() {
+  return (
+    <div className="relative mx-auto w-full max-w-[1200px] md:h-[754px] lg:h-[1014px] xl:h-[1300px]">
+      <div className="absolute left-1/2 top-0 h-[1300px] w-[1200px] -translate-x-1/2 origin-top md:scale-[0.58] lg:scale-[0.78] xl:scale-100">
+        <div
+          aria-hidden="true"
+          className="absolute top-[120px] h-[906px]"
+          style={{
+            left: "calc(50% - 50vw)",
+            width: "max(0px, calc(50vw - 720px))",
+            backgroundImage:
+              "linear-gradient(156.188deg, rgb(231, 243, 255) 0%, rgb(243, 231, 255) 100%)",
+          }}
+        />
+        <div className="absolute left-[-120px] top-[120px] h-[906px] w-[1376px] overflow-hidden">
+          <svg
+            className="block h-full w-full"
+            fill="none"
+            preserveAspectRatio="none"
+            viewBox="0 0 1376 906"
+          >
+            <path
+              d={sellerJourneySvgPaths.p2c13b300}
+              fill="url(#seller-journey-gradient)"
+            />
+            <defs>
+              <linearGradient
+                gradientUnits="userSpaceOnUse"
+                id="seller-journey-gradient"
+                x1="0"
+                x2="832.264"
+                y1="0"
+                y2="1264.01"
+              >
+                <stop stopColor="#E7F3FF" />
+                <stop offset="1" stopColor="#F3E7FF" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <h3 className="absolute left-[68px] top-[136px] z-10 font-['Lexend_Deca'] text-[33px] font-bold leading-[1.05] text-[#0a0a0a] mt-[55px]">
+          Seller Journey
+        </h3>
+
+        <div className="absolute left-[65px] top-[296px] z-10 flex w-[320px] flex-col gap-[28px]">
+          <ResponsiveImage
+            image={sellerJourneyImages.avatar}
+            alt="Amanda"
+            sizes="128px"
+            className="h-[128px] w-[128px] rounded-full object-cover"
+            loading="lazy"
+          />
+          <p className="font-['Inter'] text-[25px] font-semibold leading-[1.3] text-black">
+            Amanda is selling her car with Autozen
+          </p>
+        </div>
+
+        <svg
+          aria-hidden="true"
+          className="absolute left-[318px] top-[397px] z-10"
+          fill="none"
+          height="15"
+          viewBox="0 0 191 15"
+          width="191"
+        >
+          <path d={sellerJourneySvgPaths.p25290d00} fill="black" />
+        </svg>
+
+        <div className="absolute left-[616px] top-[22px] z-20 w-[400px]">
+          <ResponsiveImage
+            image={sellerJourneyImages.estimate}
+            alt="Autozen estimate screen showing a market value range for a 2017 Honda Civic"
+            sizes="400px"
+            className="block h-auto w-full"
+            loading="lazy"
+          />
+        </div>
+
+        <p className="absolute left-[662px] top-[645px] z-20 w-[330px] font-['Inter'] text-[14px] font-medium leading-[20px] text-black">
+          Amanda begins with a transparent market estimate, establishing clarity
+          and confidence before moving forward.
+        </p>
+
+        <svg
+          aria-hidden="true"
+          className="absolute left-[565px] top-[513px] z-30"
+          fill="none"
+          height="166"
+          viewBox="0 0 59 166"
+          width="59"
+        >
+          <path
+            d="M58 1H1V165"
+            stroke="black"
+            strokeDasharray="1 6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+          />
+        </svg>
+
+        <svg
+          aria-hidden="true"
+          className="absolute left-[256px] top-[662px] z-10"
+          fill="none"
+          height="91"
+          viewBox="0 0 312 91"
+          width="312"
+        >
+          <path d={sellerJourneySvgPaths.pbf33d00} fill="black" />
+        </svg>
+
+        <div className="absolute bottom-[112px] left-[98px] z-20 w-[380px]">
+          <ResponsiveImage
+            image={sellerJourneyImages.confirm}
+            alt="Confirm appointment screen with pickup date, time, and location details"
+            sizes="380px"
+            className="block h-auto w-full"
+            loading="lazy"
+          />
+        </div>
+
+        <div className="absolute bottom-[112px] left-[558px] z-20 w-[296px]">
+          <ResponsiveImage
+            image={sellerJourneyImages.buyer}
+            alt="Autozen buyer network screen with vehicle availability controls"
+            sizes="296px"
+            className="block h-auto w-full"
+            loading="lazy"
+          />
+        </div>
+
+        <div className="absolute bottom-[112px] left-[880px] z-20 w-[300px]">
+          <ResponsiveImage
+            image={sellerJourneyImages.offer}
+            alt="Offer screen showing a $31,300 offer with accept and reject actions"
+            sizes="300px"
+            className="block h-auto w-full"
+            loading="lazy"
+          />
+        </div>
+
+        <svg
+          aria-hidden="true"
+          className="absolute left-[433px] top-[960px] z-30"
+          fill="none"
+          height="149"
+          viewBox="0 0 123 149"
+          width="123"
+        >
+          <path d={sellerJourneySvgPaths.p38a14ec0} fill="black" />
+          <path
+            d={sellerJourneySvgPaths.p14bf8980}
+            stroke="black"
+            strokeDasharray="1 6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+          />
+        </svg>
+
+        <svg
+          aria-hidden="true"
+          className="absolute left-[846px] top-[954px] z-20"
+          fill="none"
+          height="15"
+          viewBox="0 0 30 15"
+          width="30"
+        >
+          <path d={sellerJourneySvgPaths.p394fef80} fill="black" />
+        </svg>
+
+        <p className="absolute left-[102px] top-[1202px] w-[350px] font-['Inter'] text-[14px] font-medium leading-[20px] text-black">
+          With expectations set, she books her vehicle pickup to initiate the
+          selling process.
+        </p>
+
+        <p className="absolute left-[568px] top-[1202px] w-[280px] font-['Inter'] text-[14px] font-medium leading-[20px] text-black">
+          Autozen activates its dealer network, creating competitive pressure to
+          maximize value.
+        </p>
+
+        <p className="absolute left-[880px] top-[1202px] w-[300px] font-['Inter'] text-[14px] font-medium leading-[20px] text-black">
+          She receives the strongest offer from the auction and retains full
+          control over the final decision.
+        </p>
+      </div>
     </div>
   );
 }
@@ -102,11 +316,10 @@ export function AutozenCaseStudy() {
     <div className="bg-[#fafbff] min-h-screen relative overflow-x-hidden">
       {/* Navbar */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all ${isScrolled ? "bg-white/5 backdrop-blur-sm border-b border-white/30 shadow-sm" : ""}`}
+        className={`fixed top-0 left-0 right-0 z-[100] bg-white/5 backdrop-blur-sm transition-all ${isScrolled ? "border-b border-white/30 shadow-sm" : ""}`}
       >
         <div
-          className={`mx-auto flex items-center justify-between lg:mx-[75px] ${isScrolled ? "md:mt-[8px]" : "md:mt-[18px]"} md:mb-[0px] px-[26px] sm:px-[40px] md:px-[60px] lg:px-[32px] py-[12px]`}
-          style={{ maxWidth: "2000px" }}
+          className={`mx-auto flex w-full max-w-[1384px] items-center justify-between ${isScrolled ? "md:mt-[8px]" : "md:mt-[18px]"} md:mb-[0px] px-[26px] py-[12px] sm:px-[40px] md:px-[60px] lg:w-[calc(100%-48px)] lg:px-[85px] xl:w-[calc(100%-56px)] xl:px-[85px]`}
         >
           <Link to="/" className="block">
             <div className="scale-[0.7] origin-left sm:scale-[0.85] md:scale-100">
@@ -353,24 +566,9 @@ export function AutozenCaseStudy() {
           <MobileSellerJourney />
         </div>
 
-        {/* Tablet/Desktop: Scaled original diagram */}
-        <div className="hidden md:block w-full pt-[80px] md:pt-[100px] pb-[80px] lg:pb-[100px] mb-[100px] md:mb-[140px] lg:mb-[180px] overflow-x-clip overflow-y-visible">
-          <div className="relative w-full md:h-[636px] lg:h-[723px] xl:h-[839px]">
-            {/* Background gradient - stays at left edge of viewport */}
-            <div className="absolute left-0 top-0">
-              <div className="origin-top-left md:scale-[0.66] lg:scale-[0.75] xl:scale-[0.87]">
-                <Frame1406Background />
-              </div>
-            </div>
-            {/* Content - inside centered container to align with cards above */}
-            <div className="absolute inset-0">
-              <div className="max-w-[1200px] mx-auto md:px-[40px] h-full">
-                <div className="origin-top-left md:scale-[0.66] lg:scale-[0.75] xl:scale-[0.87] md:-translate-x-[85px] lg:-translate-x-[30px]">
-                  <Frame1406 />
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* Tablet/Desktop: Image-backed seller journey */}
+        <div className="hidden md:block w-full px-[40px] pt-[80px] md:pt-[100px] pb-[80px] lg:pb-[100px] mb-[100px] md:mb-[140px] lg:mb-[180px] overflow-x-clip overflow-y-visible">
+          <DesktopSellerJourney />
         </div>
       </AnimatedSection>
 

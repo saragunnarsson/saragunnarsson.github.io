@@ -221,7 +221,7 @@ export function LandingPage() {
         className={`fixed top-0 left-0 right-0 z-[100] bg-white/5 backdrop-blur-sm transition-all ${isScrolled ? "border-b border-white/30 shadow-sm" : ""}`}
       >
         <div
-          className={`mx-auto flex w-full max-w-[1384px] items-center justify-between ${isScrolled ? "md:mt-[8px]" : "md:mt-[18px]"} md:mb-[0px] px-[26px] py-[12px] sm:px-[40px] md:px-[60px] lg:w-[calc(100%-48px)] lg:px-[150px] xl:w-[calc(100%-56px)] xl:px-[189px]`}
+          className={`mx-auto flex w-full max-w-[1384px] items-center justify-between ${isScrolled ? "md:mt-[8px]" : "md:mt-[18px]"} md:mb-[0px] px-[26px] py-[12px] sm:px-[40px] md:px-[60px] lg:w-[calc(100%-48px)] lg:px-[85px] xl:w-[calc(100%-56px)] xl:px-[85px]`}
         >
           <Link to="/" className="block">
             <div className="scale-[0.7] origin-left sm:scale-[0.85] md:scale-100">
@@ -553,7 +553,7 @@ export function LandingPage() {
                       <ImageWithFallback
                         src={landingPageImages.netCentsWidgetCard}
                         alt="NetCents Payment Widget"
-                        className="w-[80%] h-[80%] object-contain relative z-10"
+                        className="w-[100%] h-[100%] object-contain relative z-10"
                         sizes="(max-width: 767px) calc(100vw - 34px), (max-width: 1023px) 320px, 451px"
                         loading="eager"
                       />
@@ -669,7 +669,7 @@ export function LandingPage() {
                       <ImageWithFallback
                         src={landingPageImages.netCentsInvoiceCard}
                         alt="NetCents Recurring Invoices"
-                        className="w-[80%] h-[80%] object-contain"
+                        className="w-[100%] h-[100%] object-contain"
                         sizes="(max-width: 767px) calc(100vw - 34px), (max-width: 1023px) 320px, 450px"
                         loading="eager"
                       />

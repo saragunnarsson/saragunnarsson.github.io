@@ -37,7 +37,10 @@ export function MobileCryptoCheckout() {
       }}
     >
       {/* Title */}
-      <h3 className="font-['Lexend_Deca'] font-bold text-[24px] leading-[32px] text-[#0a0a0a] text-center mb-[28px]">
+      <h3
+        className="font-bold text-[24px] leading-[32px] text-[#0a0a0a] text-center mb-[28px]"
+        style={{ fontFamily: "Lexend Deca, sans-serif" }}
+      >
         Crypto Checkout Experience
       </h3>
 

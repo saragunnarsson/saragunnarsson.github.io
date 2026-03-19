@@ -100,11 +100,10 @@ export function NetCentsRecurringInvoices() {
     <div className="bg-[#fafbff] min-h-screen relative overflow-x-hidden">
       {/* Navbar */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-[100] transition-all ${isScrolled ? "bg-white/5 backdrop-blur-sm border-b border-white/30 shadow-sm" : ""}`}
+        className={`fixed top-0 left-0 right-0 z-[100] bg-white/5 backdrop-blur-sm transition-all ${isScrolled ? "border-b border-white/30 shadow-sm" : ""}`}
       >
         <div
-          className={`mx-auto flex items-center justify-between lg:mx-[75px] ${isScrolled ? "md:mt-[8px]" : "md:mt-[18px]"} md:mb-[0px] px-[26px] sm:px-[40px] md:px-[60px] lg:px-[32px] py-[12px]`}
-          style={{ maxWidth: "2000px" }}
+          className={`mx-auto flex w-full max-w-[1384px] items-center justify-between ${isScrolled ? "md:mt-[8px]" : "md:mt-[18px]"} md:mb-[0px] px-[26px] py-[12px] sm:px-[40px] md:px-[60px] lg:w-[calc(100%-48px)] lg:px-[85px] xl:w-[calc(100%-56px)] xl:px-[85px]`}
         >
           <Link to="/" className="block">
             <div className="scale-[0.7] origin-left sm:scale-[0.85] md:scale-100">
@@ -231,7 +230,7 @@ export function NetCentsRecurringInvoices() {
       </section>
 
       {/* Content Sections */}
-      <div className="max-w-[1200px] mx-auto px-[30px] sm:px-[24px] md:px-[40px] -mt-[90px] sm:-mt-[60px] md:-mt-[110px] lg:-mt-[170px] pb-[100px] md:pb-0 flex flex-col gap-[20px] relative z-10">
+      <div className="max-w-[1200px] mx-auto px-[30px] sm:px-[24px] md:px-[40px] -mt-[90px] sm:-mt-[60px] md:-mt-[110px] lg:-mt-[170px] pb-[100px] md:pb-0 flex flex-col gap-[20px] relative z-10 mb-[150px]">
         {/* The Context */}
         <AnimatedSection>
           <div className="bg-white rounded-[30px] md:rounded-[40px] shadow-[0px_0px_16.44px_0px_rgba(21,20,72,0.08)] px-[30px] md:px-[60px] py-[30px] md:py-[50px] flex flex-col gap-[10px]">
@@ -354,8 +353,12 @@ export function NetCentsRecurringInvoices() {
         <div className="hidden md:block relative w-full mb-[100px] md:mb-[140px] lg:mb-[180px]">
           <div
             aria-hidden="true"
-            className="absolute inset-y-0 left-0 right-0 rounded-r-[240px] lg:rounded-r-[320px] xl:rounded-r-[380px] pointer-events-none"
+            className="absolute left-0 top-0 pointer-events-none"
             style={{
+              width: "clamp(980px, 86vw, 1700px)",
+              height: "clamp(680px, 46vw, 906px)",
+              borderTopRightRadius: "clamp(260px, 22.8vw, 450px)",
+              borderBottomRightRadius: "clamp(260px, 22.8vw, 450px)",
               backgroundImage:
                 "linear-gradient(147deg, #E7F3FF 0%, #F3E7FF 100%)",
             }}
@@ -364,7 +367,7 @@ export function NetCentsRecurringInvoices() {
           <div className="relative z-10 mx-auto max-w-[1200px] px-[40px] lg:px-[56px] pt-[96px] lg:pt-[112px] pb-[88px] lg:pb-[110px]">
             <div className="mx-auto max-w-[976px] text-left">
               <h2
-                className="text-[#0a0a0a] text-[34px] leading-[42px] lg:text-[42px] lg:leading-[52px] xl:text-[48px] xl:leading-[58px]"
+                className="text-[#0a0a0a] text-[34px] leading-[42px] lg:text-[42px] lg:leading-[52px] xl:text-[33px] xl:leading-[58px]"
                 style={{
                   fontFamily: "Lexend Deca, sans-serif",
                   fontWeight: 700,

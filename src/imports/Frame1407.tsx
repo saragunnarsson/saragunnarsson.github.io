@@ -5,7 +5,10 @@ export default function Frame() {
   return (
     <div className="relative size-full">
       <div className="-translate-x-1/2 absolute h-[1201px] left-[calc(50%+133.5px)] top-[176px] w-[1174px]">
-        <p className="absolute z-10 font-['Lexend_Deca:Bold',sans-serif] font-bold leading-[56px] left-[0px] text-[#0a0a0a] text-[44px] top-[-5px] whitespace-nowrap">
+        <p
+          className="absolute z-10 font-bold leading-[56px] left-[0px] text-[#0a0a0a] text-[44px] top-[-5px] whitespace-nowrap"
+          style={{ fontFamily: "Lexend Deca, sans-serif" }}
+        >
           Crypto Checkout Experience
         </p>
         <div
