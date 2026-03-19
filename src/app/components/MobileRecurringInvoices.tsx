@@ -5,11 +5,8 @@ export function MobileRecurringInvoices() {
   return (
     <div className="w-full px-[24px] sm:px-[40px] pt-[90px] pb-[40px]">
       {/* Title */}
-      <div className="max-w-[600px] mx-auto mb-[40px] text-center">
-        <h2
-          className="text-[#0a0a0a] text-[26px] leading-[34px] sm:text-[30px] sm:leading-[40px] mb-[12px]"
-          style={{ fontFamily: "Lexend Deca, sans-serif", fontWeight: 700 }}
-        >
+      <div className="max-w-[600px] mx-auto mb-[40px] text-left">
+        <h2 className="font-lexend-deca font-bold text-[#0a0a0a] text-[26px] leading-[34px] sm:text-[30px] sm:leading-[40px] mb-[12px]">
           Recurring Billing Series & Invoices
         </h2>
         <p className="text-black text-[14px] leading-[22px] sm:text-[15px] sm:leading-[24px]">

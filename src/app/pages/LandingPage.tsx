@@ -295,17 +295,16 @@ export function LandingPage() {
 
       {/* Hero Section */}
       <section className="px-[16px] pt-[80px] pb-[30px] sm:px-[24px] sm:pt-[20px] md:pt-0 md:pb-0 xl:px-[28px]">
-        <div className="mx-auto max-w-[1384px]">
-          <AnimatedSection>
-            <div
-              className="rounded-[30px] px-[28px] py-[40px] sm:rounded-[50px] sm:px-[48px] sm:py-[60px] md:rounded-[70px] md:px-[80px] md:pt-[80px] md:pb-[100px] lg:rounded-[80px] lg:pl-[150px] lg:pr-[80px] lg:pt-[120px] lg:pb-[180px] xl:pl-[189px] xl:pt-[134px] xl:pb-[200px] sm:mt-[90px] md:mt-[100px] lg:mt-[115px]"
-              style={{
-                background:
-                  "linear-gradient(152.569deg, rgb(239, 224, 255) 0%, rgb(220, 234, 255) 50%, rgb(255, 229, 229) 100%)",
-                maxWidth: "2000px",
-              }}
-            >
-              <div className="max-w-4xl relative">
+        <AnimatedSection>
+          <div
+            className="w-full rounded-[30px] sm:mt-[90px] sm:rounded-[50px] md:mt-[100px] md:rounded-[70px] lg:mt-[115px] lg:rounded-[80px]"
+            style={{
+              background:
+                "linear-gradient(152.569deg, rgb(239, 224, 255) 0%, rgb(220, 234, 255) 50%, rgb(255, 229, 229) 100%)",
+            }}
+          >
+            <div className="mx-auto max-w-[1384px] px-[28px] py-[40px] sm:px-[48px] sm:py-[60px] md:px-[80px] md:pt-[80px] md:pb-[100px] lg:pl-[150px] lg:pr-[80px] lg:pt-[120px] lg:pb-[180px] xl:pl-[189px] xl:pt-[134px] xl:pb-[200px]">
+              <div className="relative max-w-4xl">
                 {/* Decorative white line - desktop only */}
                 <div className="hidden lg:block absolute left-[-80px] xl:left-[-100px] top-[25px] w-[160px] xl:w-[180px] h-[400px] xl:h-[445px]">
                   <svg
@@ -364,8 +363,8 @@ export function LandingPage() {
                 </div>
               </div>
             </div>
-          </AnimatedSection>
-        </div>
+          </div>
+        </AnimatedSection>
       </section>
 
       {/* About Section */}

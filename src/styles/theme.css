@@ -78,6 +78,10 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
+@theme {
+  --font-lexend-deca: "Lexend Deca", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

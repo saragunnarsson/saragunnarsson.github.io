@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import Frame1408 from "../../imports/Frame1408";
-import Frame1408Background from "../../imports/Frame1408Background";
 import { MobileRecurringInvoices } from "../components/MobileRecurringInvoices";
 import { Link, useNavigate } from "react-router";
 import { Mail } from "lucide-react";
@@ -9,6 +7,7 @@ import svgPaths from "../../imports/svg-si7wdvwp4g";
 import SkandiUxuiLogo from "../../imports/SkandiUxuiLogo";
 import SkandiUxuiLogoWhite from "../../imports/SkandiUxuiLogoWhite";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { mobileRecurringInvoicesImages } from "../components/mobileRecurringInvoicesImages";
 import { usePreloadImages } from "../components/usePreloadImages";
 import { caseStudyImages } from "./caseStudyImages";
 
@@ -352,19 +351,67 @@ export function NetCentsRecurringInvoices() {
         </div>
 
         {/* Tablet/Desktop: Scaled original diagram */}
-        <div className="hidden md:block w-full pt-[80px] md:pt-[100px] pb-[80px] lg:pb-[100px] mb-[100px] md:mb-[140px] lg:mb-[180px] overflow-x-clip overflow-y-visible">
-          <div className="relative w-full md:h-[638px] lg:h-[725px] xl:h-[840px]">
-            {/* Background gradient - stays at left edge of viewport */}
-            <div className="absolute left-0 top-0">
-              <div className="origin-top-left md:scale-[0.66] lg:scale-[0.75] xl:scale-[0.87]">
-                <Frame1408Background />
-              </div>
+        <div className="hidden md:block relative w-full mb-[100px] md:mb-[140px] lg:mb-[180px]">
+          <div
+            aria-hidden="true"
+            className="absolute inset-y-0 left-0 right-0 rounded-r-[240px] lg:rounded-r-[320px] xl:rounded-r-[380px] pointer-events-none"
+            style={{
+              backgroundImage:
+                "linear-gradient(147deg, #E7F3FF 0%, #F3E7FF 100%)",
+            }}
+          />
+
+          <div className="relative z-10 mx-auto max-w-[1200px] px-[40px] lg:px-[56px] pt-[96px] lg:pt-[112px] pb-[88px] lg:pb-[110px]">
+            <div className="mx-auto max-w-[976px] text-left">
+              <h2
+                className="text-[#0a0a0a] text-[34px] leading-[42px] lg:text-[42px] lg:leading-[52px] xl:text-[48px] xl:leading-[58px]"
+                style={{
+                  fontFamily: "Lexend Deca, sans-serif",
+                  fontWeight: 700,
+                }}
+              >
+                Recurring Billing Series & Invoices
+              </h2>
+              <p className="mt-[16px] max-w-[871px] text-black text-[15px] leading-[24px] lg:text-[16px] lg:leading-[26px]">
+                A structured redesign of the recurring billing workflow,
+                improving clarity, hierarchy, and merchant control.
+              </p>
             </div>
-            {/* Content - inside centered container to align with cards above */}
-            <div className="absolute inset-0">
-              <div className="max-w-[1200px] mx-auto md:px-[40px] h-full">
-                <div className="origin-top-left md:scale-[0.66] lg:scale-[0.75] xl:scale-[0.87] md:-translate-x-[190px] lg:-translate-x-[130px] xl:-translate-x-[260px] translate-y-[90px]">
-                  <Frame1408 />
+
+            <div className="mx-auto mt-[52px] grid max-w-[976px] grid-cols-3 items-start gap-[18px] lg:gap-[32px] xl:gap-[54px]">
+              <div>
+                <div className="overflow-hidden rounded-[20px] bg-white shadow-[0px_4px_24px_rgba(0,0,0,0.08)]">
+                  <ImageWithFallback
+                    src={mobileRecurringInvoicesImages.invoicesList}
+                    alt="Invoices list view"
+                    className="block w-full h-auto"
+                    sizes="(max-width: 1023px) calc((100vw - 80px - 36px) / 3), (max-width: 1279px) calc((100vw - 112px - 64px) / 3), 289px"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <div className="overflow-hidden rounded-[20px] bg-white shadow-[0px_4px_24px_rgba(0,0,0,0.08)]">
+                  <ImageWithFallback
+                    src={mobileRecurringInvoicesImages.recurringSeries}
+                    alt="Recurring series detail view"
+                    className="block w-full h-auto"
+                    sizes="(max-width: 1023px) calc((100vw - 80px - 36px) / 3), (max-width: 1279px) calc((100vw - 112px - 64px) / 3), 289px"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <div className="overflow-hidden rounded-[20px] bg-white shadow-[0px_4px_24px_rgba(0,0,0,0.08)]">
+                  <ImageWithFallback
+                    src={mobileRecurringInvoicesImages.recurringInvoice}
+                    alt="Recurring invoice detail view"
+                    className="block w-full h-auto"
+                    sizes="(max-width: 1023px) calc((100vw - 80px - 36px) / 3), (max-width: 1279px) calc((100vw - 112px - 64px) / 3), 289px"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
