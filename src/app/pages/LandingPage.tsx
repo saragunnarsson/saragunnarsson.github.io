@@ -274,7 +274,7 @@ export function LandingPage() {
           >
             <a
               href="#work-section"
-              className={`block ${isOverDark ? "text-white hover:text-gray-200" : "text-gray-700 hover:text-gray-900"} font-semibold`}
+              className={`block ${!isOverDark ? "text-white hover:text-gray-200" : "text-gray-700 hover:text-gray-900"} font-semibold`}
               onClick={() => setIsMenuOpen(false)}
             >
               Work
